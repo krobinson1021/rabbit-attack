@@ -10,14 +10,14 @@ onload = function myGame(){
 
 	// creating knight
 	let playerSprite = new Image();
-	playerSprite.src = "knightSprite.png";
+	playerSprite.src = "graphics/knightSprite.png";
 
 	// creating array of killer rabbits
 	let enemySpeed = 5;
 	let allEnemySprites = [];
 	for (let i = 0; i < 5; i++) {
 		let enemySprite = new Image();
-		enemySprite.src = "whiteRabbitSprite.png";
+		enemySprite.src = "graphics/whiteRabbitSprite.png";
 		allEnemySprites.push({object:enemySprite, x:0, y:0});
 	}
 	
@@ -25,7 +25,7 @@ onload = function myGame(){
 	let murderCountdown = 0;
 	let jumpScareScream;
 	let rabbitCarnage = new Image();
-	rabbitCarnage.src = "rabbit.jpg";
+	rabbitCarnage.src = "graphics/rabbit.jpg";
 
 	// tracking mouse position
 	let mouseX;
@@ -58,7 +58,7 @@ onload = function myGame(){
 		ctx.fillText("It was not a flesh wound.", canvas.width/2, canvas.height/2+80); 
 
 		ctx.drawImage(rabbitCarnage,canvas.width/2-105,canvas.height/2-80);
-		jumpScareScream = new Audio("wilhelmScream.mp3");
+		jumpScareScream = new Audio("graphics/wilhelmScream.mp3");
 		jumpScareScream.play();
 	};
 
